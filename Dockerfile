@@ -10,6 +10,8 @@ FROM alpine:3.9
 
 COPY --from=builder /endlessh /
 
+EXPOSE 22
+
 ENTRYPOINT ["/endlessh"]
 
 CMD ["-v","-f","/endlessh.conf"]
