@@ -1,7 +1,7 @@
 FROM alpine:3.9 as builder
-RUN apk upgrade -U && apk add --no-cache build-base
+RUN apk upgrade -U && apk add --no-cache build-base git
 RUN cd / && \
-		git@github.com:skeeto/endlessh.git && \
+		git clone https://github.com/skeeto/endlessh.git && \
 		cd /endlessh && \
 		make
 
