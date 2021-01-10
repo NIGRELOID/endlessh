@@ -14,4 +14,4 @@ EXPOSE 2222/tcp
 
 ENTRYPOINT ["/endlessh"]
 
-CMD ["-v"]
+CMD ["-v","-f","/endlessh.conf"]
